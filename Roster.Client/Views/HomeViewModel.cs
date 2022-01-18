@@ -27,7 +27,8 @@ namespace Roster.Client.ViewModels
         }
 
         public void ExecuteUpdateApplication()
-        { 
+        {
+            Title = "Roster App v2.0";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
