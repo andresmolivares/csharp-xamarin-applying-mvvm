@@ -5,18 +5,17 @@ namespace Roster.Client.ViewModels
 {
     public class HomeViewModel : INotifyPropertyChanged
     {
-        //private string _Title = "Roster App";
+        private string _Title = "Roster App";
 
-        //public string Title
-        //{
-        //    get { return _Title; }
-        //    set
-        //    {
-        //        _Title = value;
-        //        NotifyChange(nameof(Title));
-        //    }
-        //}
-        public string Title { get; set; } = "Roster App";
+        public string Title
+        {
+            get { return _Title; }
+            set
+            {
+                _Title = value;
+                NotifyChange(nameof(Title));
+            }
+        }
 
         private Command _UpdateApplicationCommand;
         public Command UpdateApplicationCommand
@@ -29,7 +28,7 @@ namespace Roster.Client.ViewModels
 
         public void ExecuteUpdateApplication()
         {
-            Title = "Roster App v2.0";
+            Title = "Roster App (v2.0)";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

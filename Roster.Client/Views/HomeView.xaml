@@ -15,7 +15,7 @@
             x:Name="AddPersonButton" 
             x:FieldModifier="public" 
             Text="Update Application" 
-            Command="{Binding UpdateApplicationCommand}"
+            Command="{Binding UpdateApplicationCommand, Mode=OneTime}"
             />
         <ListView x:Name="PeopleListView" x:FieldModifier="public" VerticalOptions="FillAndExpand">
             <ListView.ItemTemplate>
