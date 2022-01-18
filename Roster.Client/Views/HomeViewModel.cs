@@ -5,14 +5,14 @@ namespace Roster.Client.ViewModels
 {
     public class HomeViewModel : INotifyPropertyChanged
     {
-        private string _Title = "Roster App";
+        private string title = "Roster App";
 
         public string Title
         {
-            get { return _Title; }
+            get { return title; }
             set
             {
-                _Title = value;
+                title = value;
                 NotifyChange(nameof(Title));
             }
         }
@@ -22,7 +22,8 @@ namespace Roster.Client.ViewModels
         {
             get 
             { 
-                return _UpdateApplicationCommand ?? (_UpdateApplicationCommand = new Command(() => ExecuteUpdateApplication()));
+                return _UpdateApplicationCommand 
+                    ?? (_UpdateApplicationCommand = new Command(() => ExecuteUpdateApplication()));
             }
         }
 
