@@ -41,7 +41,7 @@ namespace Roster.Client.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyChange(string propertyName)
         {
-            if (PropertyChanged is not null)
+            if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
