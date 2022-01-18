@@ -7,6 +7,11 @@ namespace Roster.Client.ViewModels
 {
     public class HomeViewModel : INotifyPropertyChanged
     {
+        public HomeViewModel()
+        {
+            UpdateApplicationCommand = new Command(() => ExecuteUpdateApplication());
+        }
+
         private string title = "Roster App";
 
         public string Title
@@ -19,15 +24,7 @@ namespace Roster.Client.ViewModels
             }
         }
 
-        private Command _UpdateApplicationCommand;
-        public Command UpdateApplicationCommand
-        {
-            get 
-            { 
-                return _UpdateApplicationCommand 
-                    ?? (_UpdateApplicationCommand = new Command(() => ExecuteUpdateApplication()));
-            }
-        }
+        public Command UpdateApplicationCommand { get; }
 
         public ObservableCollection<Person> People { get; set; } = new ObservableCollection<Person>
         { 
