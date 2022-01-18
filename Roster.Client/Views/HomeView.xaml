@@ -9,8 +9,14 @@
             Text="{Binding Title, FallbackValue=Header, Mode=OneWay}" 
             FontSize="Header" 
             HorizontalTextAlignment="Center" 
-            VerticalOptions="Start" />
-        <Button x:Name="AddPersonButton" x:FieldModifier="public" Text="Update Application" />
+            VerticalOptions="Start" 
+            />
+        <Button 
+            x:Name="AddPersonButton" 
+            x:FieldModifier="public" 
+            Text="Update Application" 
+            Command="{Binding UpdateApplicationCommand}"
+            />
         <ListView x:Name="PeopleListView" x:FieldModifier="public" VerticalOptions="FillAndExpand">
             <ListView.ItemTemplate>
                 <DataTemplate>
